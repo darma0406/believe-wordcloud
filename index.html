@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BELIEVE 文字雲</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-label="BELIEVE 文字雲">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">BELIEVE Firebase</p>
+            <h1>文字雲</h1>
+          </div>
+          <div class="status" id="status">連線中</div>
+        </header>
+
+        <form class="composer" id="wordForm">
+          <label for="wordInput">新增文字</label>
+          <div class="input-row">
+            <input
+              id="wordInput"
+              name="word"
+              type="text"
+              maxlength="24"
+              autocomplete="off"
+              placeholder="輸入一個詞"
+              required
+            />
+            <button type="submit">加入</button>
+          </div>
+        </form>
+
+        <section class="cloud-panel" aria-label="即時文字雲">
+          <div class="empty-state" id="emptyState">還沒有文字</div>
+          <div class="word-cloud" id="wordCloud"></div>
+        </section>
+      </section>
+
+      <aside class="sidebar" aria-label="文字清單">
+        <div class="sidebar-header">
+          <h2>文字清單</h2>
+          <span id="wordCount">0</span>
+        </div>
+        <ul class="word-list" id="wordList"></ul>
+      </aside>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
