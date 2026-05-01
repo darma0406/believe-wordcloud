@@ -1,0 +1,27 @@
+# OS and desktop files
+desktop.ini
+Thumbs.db
+.DS_Store
+*.tmp
+~$*
+
+# Secrets and credentials
+.env
+.env.*
+*.key
+credentials.*
+secrets.*
+service-account*.json
+
+# AI agent local state
+.claude/
+.codex/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Build output and caches
+dist/
+build/
+.cache/
